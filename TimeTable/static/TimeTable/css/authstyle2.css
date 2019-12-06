@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    font-family: 'Chivo', sans-serif;
+	background: linear-gradient(231.31deg, #F1D7E1 0%, #88BDE6 99.99%, #E7EBEE 100%);
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    color: black;
+}
+
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.intro_logo{
+    font-family:'Courgette', cursive;  
+    font-size: 30px;
+    font-weight: 700;
+    font-style:'Courgette', cursive; 
+    color: #FFFFFF;
+}
+
+.head{
+     background-color: #333333;
+}
+
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 70%;
+	margin-right: 2%;
+	margin-top: 1.5%;
+}
+
+.nav__link {
+    font-family: 'Cousine', monospace;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color: #FFFFFF;
+    text-decoration: none;
+
+    transition: color .1s linear;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+    opacity: .75;
+	color: gray; 
+	text-decoration: none;
+}
+
+.nav__link:hover:after,
+.nav__link.active:after {
+    opacity: 75;
+}
+
+.nav__link.active {
+    opacity: .75;
+}
+
+.sign_in {
+	display: grid;
+	position: relative;
+	width: 900px;
+	height: 600px;
+	margin-top:5%;
+	margin-bottom:5%;
+	left:20%;
+	background: #fff;
+	box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sign_in_pic {
+	position:relative;
+	left:25%;
+}
+
+.sign_in_pic button {
+	position:relative;
+	left:25%;
+}
+
+.sign_in_logo {
+	position: absolute;
+	width: 74px;
+	height: 30px;
+	left: 45%;
+	top: 15%;
+
+	font-family: Courgette;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 30px;
+	/* identical to box height */
+
+	color: #fff;
+
+	text-shadow: -2px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sign_in button{
+    width: 15%;
+    position: absolute;
+    margin-top:57%;
+    margin-left: 17%;
+    z-index: 3;
+}
+
+.sign_in h2 {
+	position:absolute;
+	left:21%; 
+	top: 15%;
+	font-family: 'Chivo', sans-serif;
+	font-size: 24px;
+	color:black;
+}
+
+.sign_in form {
+	position:relative;
+	top:-206%;
+	
+}
+
+.form-group{
+	position:relative;
+	width:25%;
+	height:20px;
+	left:12%;
+	top:80%;
+	padding:20px 0;
+	margin-bottom:6%;
+}
+.form-group label{
+	color:black;
+}
+
+.form-check-label{
+	margin-left:10%;
+}
+
+.form-check-input {
+	left: 10%;
+}
+
+.btn {
+	position:relative;
+	top:47%;
+	left:0%;
+	z-index:5;
+}
+button {
+	color: white;
+	margin-top:10px;
+	margin-left: 100px;
+	font-weight: bold;
+    border: 2px solid #fff; /* Параметры рамки */
+    background: none; /* Цвет фона */
+    font-size: 14px; /* Размер текста */
+    padding: 5px 20px; /* Поля вокруг текста */
+}
+   
+.text-white1{
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 11px;
+    color: #828282;
+    margin-top: 1%;
+    
+}
+.autro__logo{
+        font-family:'Courgette', cursive;  
+        font-size: 30px;
+    font-weight: 700;
+    font-style:'Courgette', cursive; 
+    color: white;
+}
+
+.foot{
+    background-color: #333333;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link href="https://fonts.googleapis.com/css?family=Chivo|Courgette|Cousine&display=swap" rel="stylesheet">
+    <title>DemAL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'TimeTable/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'TimeTable/css/eventDecsstyle.css' %}"
+    
+</head>
+    
+<body>
+    
+    <header class="head">
+         <div class="container-fluid">
+             <div class="container">
+                <div class="header__inner">
+                    <div class="">
+                        <div class="row py-3">
+                            <a class="intro_logo" href="/">DemAl</a>
+                            <nav class="nav">
+                            <a class="nav__link" href="/events">EVENTS</a>
+                            <a class="nav__link" href="#aboutUS">ABOUT US</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+   <div class="bg">
+       <div class="container hei">
+            <div class="row hei">
+                <div class="wei d-flex align-content-center justify-content-center flex-wrap">
+                    <div class="backgroundTitle">
+                        <div class="d-flex">
+                          <div class="line1"></div>
+                            <img src="/media/{{event.img}}" class="ml-5 mt-5" style="width: 200px;height:250px;">
+                            <div class="ml-5 mt-5 flex-column" style="width: 60%;">
+                                <h1>{{ event.events_name }}</h1>
+                                <h2 class="mt-3">{{event.date|date:"M d, Y"}}</h2>
+                                <h6 class="mt-3">{{ event.info }}</h6>
+                                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">BUY TICKET</a>
+                                <div class="collapse" id="collapseExample">
+                                <div class="card w-50">  
+                                  <div class="card-body">
+                                    <div class="form-col">
+                                      <div class="col">
+                                        <input type="text" class="form-control" placeholder="Phone Number">
+                                      </div>
+                                      <div class="col">
+                                        <input type="text" class="form-control" placeholder="Email">
+                                      </div>
+                                    </div>
+                                    <a href="/payment" class="btn btn-primary">Go to payment</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="line2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--
+       <div class="container">
+    <div class="backgroundTitle row">
+		<div class="line1">
+		</div>
+		<div class="line2">
+  		</div>
+        <div class="row">
+            <img src="assets/images/Rectangle%208.png" class="d-flex justify-content-start ml-5 mt-5">
+            <div class="d-flex justify-content-end ml-5 mt-5">
+                <h1>MyaGi & Andy Panda</h1>
+            </div>
+        </div>
+    </div>
+           </div>
+-->
+  </div>
+	
+	
+	<footer class="foot">
+  <div class="container-fluid">
+    <div class="">
+      <div class="row py-3">
+        <div class="col-md-4">
+          <p class="text-white1">Copyright © 2019 DemAl Kazakhstan.<br><br><br>
+              All rights reserved.</p>
+        </div>
+          <div class="row col-md-4 justify-content-center align-items-centeralign-items-center">
+              <p class="autro__logo">DemAl</p>
+          </div>
+        <div class="row col-md-4 justify-content-end">
+          <div class="d-inline-block">
+            <div class="bg-circle-outline d-inline-block">
+              <a href="https://www.facebook.com/" class="text-white"><img src="{% static 'TimeTable/logos/facebook.svg' %}"><i class="fa fa-2x fa-fw fa-facebook"></i>
+		</a>
+              </div>
+
+            <div class="bg-circle-outline d-inline-block">
+              <a href="https://instagram.com/" class="text-white"><img src="{% static 'TimeTable/logos/insta.svg' %}">
+                <i class="fa fa-2x fa-fw fa-twitter"></i></a>
+            </div>
+
+            <div class="bg-circle-outline d-inline-block">
+              <a href="https://www.telegram.com/" class="text-white"><img src="{% static 'TimeTable/logos/telegram.svg' %}">
+                <i class="fa fa-2x fa-fw fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{% static 'TimeTable/js/bootstrap.min.js' %}"></script>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% load staticfiles %}
+        <link href="https://fonts.googleapis.com/css?family=Chivo|Courgette|Cousine&display=swap" rel="stylesheet">
+        <title>DemAL</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'TimeTable/css/bootstrap.min.css' %}">
+	   <link rel="stylesheet" href="{% static 'TimeTable/css/payment.css' %}">
+    </head>
+    
+    <body>
+        <header class="head">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="">
+                            <div class="row py-3">
+                                <a class="intro_logo" href="/">DemAl</a>
+                                <nav class="nav">
+                                <a class="nav__link" href="/events">EVENTS</a>
+                                <a class="nav__link" href="#aboutUS">ABOUT US</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="bg">
+            <div class="container hei">
+                <div class="row hei">
+                    <div class="wei d-flex align-content-center justify-content-center flex-wrap">
+                        <div class="semilayer">
+						    <div class="card text-white bg-dark mb-3" style="max-width: 50%; height:100%;">
+								<div class="card-header">How would you like to pay?</div>
+									<div class="card-body">
+										<div class="custom-control custom-radio">
+										  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+										  <label class="custom-control-label" for="customRadio1">VISA</label>
+										</div>
+										
+										<div class="custom-control custom-radio">
+										  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+										  <label class="custom-control-label" for="customRadio2">MasterCard</label>
+										</div>
+										
+										<div class="custom-control custom-radio">
+										  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+										  <label class="custom-control-label" for="customRadio3">PayPal</label>
+										</div>
+										
+										
+			
+								</div>
+							</div>
+								
+						
+							<div class="card bg-light mb-3" style="max-width: 50%; margin-top:-59.4%; margin-left:50%; height:100%">
+								
+								<div class="card-body">
+									
+									<h4 class="card-text" style="margin-top:15	%;">
+										
+										<form>
+											<div class="form-col" style="margin-top:5%;">
+										    CARDHOLDERS NAME 
+											<div class="col" style="padding:2%;">
+											  <input type="text" class="form-control" placeholder="Name" id="name">
+											</div>
+											CARD NUMBER 
+											<div class="form-row" style="padding:2%;">
+												<div class="col-2">
+												  <input type="text" class="form-control" placeholder="XXXX">
+												</div>
+												<div class="col-2">
+												  <input type="text" class="form-control" placeholder="XXXX">
+												</div>
+												<div class="col-2">
+												  <input type="text" class="form-control" placeholder="XXXX">
+												</div>
+												<div class="col-2">
+												  <input type="text" class="form-control" placeholder="XXXX">
+												</div>
+											</div>
+											EXPERATION DATE
+											<div class="form-row" style="padding:2%;">
+											   <div class="col-3">
+												  <input type="text" class="form-control" placeholder="Date">
+												</div>
+											</div>
+											
+											CVV/CVC
+											<div class="col-2" style="padding:2%;">
+											  <input type="text" class="form-control" placeholder="***">
+											</div>
+										  </div>
+										</form>
+										
+										<div class="col-auto">
+										  <div class="form-check mb-2">
+										  </div>
+											<button type="button" class="btn btn-secondary btn-lg btn-block">Pay now</button>
+										</div>
+									
+									</h4>
+								</div>
+							</div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+        </div>
+    
+        <footer class="foot">
+            <div class="container-fluid">
+                    <div class="row py-3">
+                        <div class="col-md-4">
+                            <p class="text-white1">Copyright © 2019 DemAl Kazakhstan.<br><br><br>
+                            All rights reserved.</p>
+                        </div>
+                        <div class="row col-md-4 justify-content-center align-items-centeralign-items-center">
+                        <p class="autro__logo">DemAl</p>
+                        </div>
+                        
+                        <div class="row col-md-4 justify-content-end">
+                            <div class="d-inline-block">
+                                <div class="bg-circle-outline d-inline-block">
+                                    <a href="https://www.facebook.com/" class="text-white"><img src="{% static 'TimeTable/logos/facebook.svg' %}"><i class="fa fa-2x fa-fw fa-facebook"></i>
+		                          </a>
+                                </div>
+
+                                <div class="bg-circle-outline d-inline-block">
+                                    <a href="https://instagram.com/" class="text-white"><img src="{% static 'TimeTable/logos/insta.svg' %}">
+                                        <i class="fa fa-2x fa-fw fa-twitter"></i>
+                                    </a>
+                                </div>
+
+                                <div class="bg-circle-outline d-inline-block">
+                                    <a href="https://www.telegram.com/" class="text-white"><img src="{% static 'TimeTable/logos/telegram.svg' %}">
+                                        <i class="fa fa-2x fa-fw fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+	</body>
+    
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{% static 'TimeTable/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'TimeTable/js/eventList.js' %}"></script>
+    
+</html>

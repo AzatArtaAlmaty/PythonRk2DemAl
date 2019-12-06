@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    font-family: 'Chivo', sans-serif;
+	background-color:  #E0E0E0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h3, h4, h5, p {
+
+    color: #FFFFFF;
+    margin: 0;
+    color: black;
+}
+
+h1, h2 {
+    color: white;
+}
+h6 {
+    font-family: Chivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+}
+
+
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.intro__inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.intro_logo{
+    font-family:'Courgette', cursive;  
+    font-size: 30px;
+    font-weight: 700;
+    font-style:'Courgette', cursive; 
+    color: #FFFFFF;
+}
+
+.intro_logo:hover{
+    color: #FFFFFF;
+    text-decoration: none!important;
+}
+
+
+.head{
+     background-color: #333333;
+  
+}
+
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 70%;
+	margin-right: 2%;
+	margin-top: 1.5%;
+}
+
+.nav__link {
+    font-family: 'Cousine', monospace;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color: #FFFFFF;
+    text-decoration: none;
+
+    transition: color .1s linear;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+    opacity: .75;
+	color: gray; 
+}
+
+.nav__link:hover:after,
+.nav__link.active:after {
+    opacity: 75;
+}
+
+.nav__link.active {
+    opacity: .75;
+}
+
+
+.backgroundTitle{
+    width: 100%;
+    height: 60%;
+    background: #333333;
+}
+
+.backgroundTitle_text h1, .backgroundTitle_text h3,
+.backgroundTitle_text h4{
+		
+	 
+	 color: #fff;
+	 font-family: 'Chivo', sans-serif;
+	 margin-left: 35%;
+	 margin-top: 2%;
+	 margin-right: 5%;
+	 text-align:left;
+}
+
+.hei{
+    height: 100%;
+}
+
+.wei{
+    width: 100%;
+}
+
+/*
+.backgroundTitle img{
+    width: 23%;
+    height: 45%;
+    background: #333333;
+}
+*/
+
+.bg{
+    min-width: 100%; 
+    height: 1000px;
+    background: url("../images/Rectangle%2033.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.backgroundTitle button{
+	width: 150px;
+	height: 35px;
+
+	background: #FFC700;
+	box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.line1{
+	position: absolute;
+	width: 200px;
+	height: 170px;
+	right: 11%;
+    bottom: -10%;
+	border-bottom: 2px solid #FFC700;
+	border-left: 2px solid #FFC700;
+	box-sizing: border-box;
+	transform: rotate(-90deg);
+}
+
+.line2{
+	position: absolute;
+	width: 200px;
+	height: 170px;
+	left: 11%;
+	top: 42%;
+	border-top: 2px solid #FFC700;
+	border-right: 2px solid #FFC700;
+	box-sizing: border-box;
+	transform: rotate(-90deg);
+}
+
+.card{
+    margin-top: 2%;
+}
+
+.col{
+    padding: 0px 0px 15px;
+}
+
+.text-white1{
+    font-family: 'Courier New';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 11px;
+    color: #828282;
+    margin-top: 1%;
+    
+}
+.autro__logo{
+        font-family:'Courgette', cursive;  
+        font-size: 30px;
+    font-weight: 700;
+    font-style:'Courgette', cursive; 
+    color: white;
+}
+
+.text-white1{
+    font-family: Courier New;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 11px;
+    color: #828282;
+    margin-top: 1%;
+    
+}
+.autro__logo{
+        font-family:'Courgette', cursive;  
+        font-size: 30px;
+    font-weight: 700;
+    font-style:'Courgette', cursive; 
+    color: white;
+}
+
+.foot{
+    background-color: #333333;
+}
+
+.foot{
+    background-color: #333333;
+}
+
+.btn {
+    background: #FFC700;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:hover {
+    color: black;
+    background: #FFC700;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-color: #0062cc;
+}
+button {
+	margin-top:10px;
+	margin-left: 100px;
+	font-weight: bold;
+    border: 2px solid #FFFFFF; /* Параметры рамки */
+    background: #fff; /* Цвет фона */
+    font-size: 14px; /* Размер текста */
+    padding: 5px 20px; /* Поля вокруг текста */
+   }

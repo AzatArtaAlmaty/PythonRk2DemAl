@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Chivo|Courgette|Cousine&display=swap" rel="stylesheet">
+    <title>DemAL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'TimeTable/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'TimeTable/css/eventListstyle.css' %}">
+  <link rel="stylesheet" href="{% static 'TimeTable/css/datepicker.min.css' %}">
+    
+</head>
+    
+<body>
+    
+    <header class="head">
+         <div class="container-fluid">
+             <div class="container">
+                <div class="header__inner">
+                    <div class="">
+                        <div class="row py-3">
+                            <a class="intro_logo" href="/">DemAl</a>
+                            <nav class="nav">
+                              <a class="nav__link" href="/events">EVENTS</a>
+                              <a class="nav__link" href="/#aboutUS">ABOUT US</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mb-5">
+      <img src="{% static 'TimeTable/images/Rectangle 39.png' %}" alt="" class="w-100">
+      <div class="container bg marg">
+        <div class="d-flex flex-row">
+          <div class="dropdown mt-3 ml-3">
+            <button class="btn btn-secondary dropdown-toggle dropd" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Category
+            </button>
+            <hr>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              {% for category in list_of_category %}
+              <p class="dropdown-item" value="{{category.id}}">{{category.category_name}}</p>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="d-flex flex-column m-3">
+            <input class="dropd btn btn-secondary" data-toggle="datepicker" placeholder="Date" >
+            <hr>
+          </div>
+            <a href="/eventDesc/{{event.id}}" class="btn btn-outline-light mt-4 mb-4" style="margin-left:50%;" id="SearchID" href="#">Search</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="cards" align="center">
+      {% for event in list_of_events %}
+      <div class="d-inline-flex card m-5" style="width: 300px;">
+        <img class="card-img-top" src="/media/{{event.img}}" alt="Card image cap" style="height:250px;">
+        <div class="card-body">
+          <h5 class="card-title">{{event.events_name}}</h5>
+           <p class="card-text"> 
+                <img src="{% static 'TimeTable/logos/place.svg' %}">
+                {{event.geolocation}}
+                <br>
+                <img src="{% static 'TimeTable/logos/date.svg' %}">
+                {{event.date|date:"M d, Y"}}
+              </p>
+          <a href="/eventDesc/{{event.id}}" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      {% endfor %}
+</div>
+    
+
+<footer class="foot">
+  <div class="container-fluid">
+    <div class="">
+      <div class="row py-3">
+        <div class="col-md-4">
+          <p class="text-white1">Copyright © 2019 DemAl Kazakhstan.<br><br><br>
+              All rights reserved.</p>
+        </div>
+          <div class="row col-md-4 justify-content-center align-items-centeralign-items-center">
+              <p class="autro__logo">DemAl</p>
+          </div>
+        <div class="row col-md-4 justify-content-end">
+          <div class="d-inline-block">
+            <div class="bg-circle-outline d-inline-block">
+              <a href="https://www.facebook.com/" class="text-white"><img src="{% static 'TimeTable/logos/facebook.svg' %}"><i class="fa fa-2x fa-fw fa-facebook"></i>
+        </a>
+              </div>
+
+            <div class="bg-circle-outline d-inline-block">
+              <a href="https://instagram.com/" class="text-white"><img src="{% static 'TimeTable/logos/insta.svg' %}">
+                <i class="fa fa-2x fa-fw fa-twitter"></i></a>
+            </div>
+  
+            <div class="bg-circle-outline d-inline-block">
+              <a href="https://www.telegram.com/" class="text-white"><img src="{% static 'TimeTable/logos/telegram.svg' %}">
+                <i class="fa fa-2x fa-fw fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{% static 'TimeTable/js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'TimeTable/js/datepicker.min.js' %}" charset="UTF-8"></script>
+    <script src="{% static 'TimeTable/js/main.js' %}"></script>
+</html>
